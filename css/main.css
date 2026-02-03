@@ -1,0 +1,7 @@
+@layer settings, base, components;
+
+@import "settings/colors.css" layer(settings);
+@import "settings/typography.css" layer(settings);
+
+@import "base/html.css" layer(base);
+@import "base/body.css" layer(base);

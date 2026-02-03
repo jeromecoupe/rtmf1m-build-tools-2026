@@ -1,0 +1,31 @@
+/* ==================================
+=colors
+================================== */
+
+:root {
+  --color-neutral-100: hsl(0, 3%, 6%);
+  --color-neutral-200: hsl(0, 3%, 20%);
+  --color-neutral-300: hsl(0, 3%, 30%);
+  --color-neutral-400: hsl(0, 3%, 40%);
+  --color-neutral-500: hsl(0, 3%, 60%);
+  --color-neutral-600: hsl(0, 3%, 70%);
+  --color-neutral-700: hsl(0, 3%, 80%);
+  --color-neutral-800: hsl(0, 3%, 95%);
+
+  --color-pink-base: #f64ca1;
+  --color-pink-light: hsl(from #f64ca1, h s calc(l + 20));
+  --color-pink-dark: hsl(from #f64ca1, h s calc(l - 20));
+
+  /* accent */
+  --color-accent: var(--color-pink-base);
+  --color-accent-light: var(--color-pink-light);
+  --color-accent-dark: var(--color-pink-dark);
+
+  /* backgrounds / surfaces */
+  --color-background-primary: var(--color-neutral-800);
+
+  /* text */
+  --color-text-primary: var(--color-neutral-100);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-muted: var(--color-neutral-400);
+}
