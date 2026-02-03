@@ -5,3 +5,4 @@
 
 @import "base/html.css" layer(base);
 @import "base/body.css" layer(base);
+@import "base/fonts.css" layer(base);

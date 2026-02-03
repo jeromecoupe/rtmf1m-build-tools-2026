@@ -3,5 +3,5 @@
 ================================== */
 
 :root {
-  --fontstack-main: system-ui, sans-serif;
+  --fontstack-main: "Satoshi", system-ui, sans-serif;
 }

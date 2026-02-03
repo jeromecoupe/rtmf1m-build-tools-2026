@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../../fonts/satoshi-variable.woff2') format('woff2-variations');
+    src: url('../../fonts/satoshi-variable.woff2') format('woff2') tech('variations');
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../../fonts/satoshi-variableitalic.woff2') format('woff2-variations');
+    src: url('../../fonts/satoshi-variableitalic.woff2') format('woff2') tech('variations');
+    font-weight: 300 900;
+    font-style: italic;
+    font-display: swap;
+}
