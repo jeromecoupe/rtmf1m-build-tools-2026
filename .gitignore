@@ -1,0 +1,4 @@
+# ignore editor and mac stuff
+
+/.vscode
+.DS_Store
