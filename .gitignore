@@ -1,4 +1,9 @@
 # ignore editor and mac stuff
-
 /.vscode
 .DS_Store
+
+# dist files
+/dist
+
+# node modules
+/node_modules

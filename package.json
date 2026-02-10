@@ -1,0 +1,27 @@
+{
+  "name": "rtmf1m-build-tools-2026",
+  "version": "1.0.0",
+  "description": "demo project for Git and NPM Scripts",
+  "scripts": {
+    "styles:dev": "lightningcss --bundle \"./css/main.css\" -o \"./dist/main.css\"",
+    "styles:prod": "lightningcss --bundle --minify \"./css/main.css\" -o \"./dist/main.css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromecoupe/rtmf1m-build-tools-2026.git"
+  },
+  "keywords": [
+    "git",
+    "scripts",
+    "build"
+  ],
+  "author": "Jérôme Coupé, Nox Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeromecoupe/rtmf1m-build-tools-2026/issues"
+  },
+  "homepage": "https://github.com/jeromecoupe/rtmf1m-build-tools-2026#readme",
+  "devDependencies": {
+    "lightningcss-cli": "^1.31.1"
+  }
+}
