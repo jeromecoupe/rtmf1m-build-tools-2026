@@ -1,21 +1,28 @@
 {
   "name": "rtmf1m-build-tools-2026",
   "version": "1.0.0",
-  "description": "demo project for Git and NPM Scripts",
+  "description": "Git basics and build pipeline NPM scripts",
+  "main": "index.js",
+  "browserslist": "> 0.5%, not dead",
   "scripts": {
-    "styles:dev": "lightningcss --bundle \"./css/main.css\" -o \"./dist/main.css\"",
-    "styles:prod": "lightningcss --bundle --minify \"./css/main.css\" -o \"./dist/main.css\""
+    "styles:dev": "lightningcss --bundle --browserslist \"./css/main.css\" -o \"./dist/css/main.css\"",
+    "styles:prod": "lightningcss --bundle --minify --browserslist \"./css/main.css\" -o \"./dist/css/main.css\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeromecoupe/rtmf1m-build-tools-2026.git"
   },
   "keywords": [
-    "git",
+    "npm",
     "scripts",
-    "build"
+    "git",
+    "build pipeline"
   ],
-  "author": "Jérôme Coupé, Nox Nguyen",
+  "author": "Nox Nguyen",
+  "contributors": [
+    "Jérôme Coupé",
+    "Nox Nguyen"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jeromecoupe/rtmf1m-build-tools-2026/issues"
