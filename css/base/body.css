@@ -9,7 +9,7 @@ body {
   color: var(--color-text-primary);
   background-color: var(--color-background-primary);
 
-  @media (width >= 750px) {
-    background-color: green;
+  @media (width>= 750px) {
+    background-color: orange;
   }
 }

@@ -5,8 +5,12 @@
   "main": "index.js",
   "browserslist": "> 0.5%, not dead",
   "scripts": {
+    "server": "browser-sync start --server \"./\" --files \"./*.html\" \"./dist/**/*\"",
     "styles:dev": "lightningcss --bundle --browserslist \"./css/main.css\" -o \"./dist/css/main.css\"",
-    "styles:prod": "lightningcss --bundle --minify --browserslist \"./css/main.css\" -o \"./dist/css/main.css\""
+    "styles:prod": "lightningcss --bundle --minify --browserslist \"./css/main.css\" -o \"./dist/css/main.css\"",
+    "watch:styles": "onchange \"./css/**/*\" -- npm run styles:dev",
+    "build": "npm run styles:prod",
+    "dev": "npm-run-all --parallel server watch:styles"
   },
   "repository": {
     "type": "git",
@@ -29,6 +33,9 @@
   },
   "homepage": "https://github.com/jeromecoupe/rtmf1m-build-tools-2026#readme",
   "devDependencies": {
-    "lightningcss-cli": "^1.31.1"
+    "browser-sync": "^3.0.4",
+    "lightningcss-cli": "^1.31.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0"
   }
 }
