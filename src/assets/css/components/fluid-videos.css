@@ -1,0 +1,17 @@
+/* ==================================
+=fluid videos
+================================== */
+
+.fluidvideo {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16 / 9;
+  background-color: black;
+}
+
+.fluidvideo > iframe {
+  border: none;
+  inline-size: 100%;
+  block-size: 100%;
+}
