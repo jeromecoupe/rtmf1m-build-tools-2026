@@ -8,4 +8,5 @@ body {
 
   color: var(--color-text-primary);
   background-color: var(--color-background-primary);
+  font-size: var(--fontsize-400);
 }

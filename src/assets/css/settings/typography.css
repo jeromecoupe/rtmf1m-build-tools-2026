@@ -5,4 +5,15 @@
 :root {
   --fontstack-main: system-ui, sans-serif;
   --fontstack-alt: "Josephin Sans", system-ui, sans-serif;
+
+  /* https://www.modularscale.com/?16&px&1.2 */
+
+  --fontsize-200: calc(11/16 * 1rem);
+  --fontsize-300: calc(13/16 * 1rem);
+  --fontsize-400: 1rem;
+  --fontsize-500: calc(19/16 * 1rem);
+  --fontsize-600: clamp(23/16 * 1rem, 1.337rem + 0.459vi, 28/16 * 1rem);
+  --fontsize-700: clamp(28/16 * 1rem, 1.337rem + 0.459vi, 33/16 * 1rem);
+  --fontsize-800: clamp(33/16 * 1rem, 1.337rem + 0.459vi, 40/16 * 1rem);
+  --fontsize-900: clamp(40/16 * 1rem, 1.337rem + 0.459vi, 48/16 * 1rem);
 }
