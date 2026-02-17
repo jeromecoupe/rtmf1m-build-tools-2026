@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Josephin Sans";
+  src: url("../fonts/josefin-sans-variable.woff2") format("woff2-variations");
+  src: url("../fonts/josefin-sans-variable.woff2") format("woff2") tech("variations");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josephin Sans";
+  src: url("../fonts/josefin-sans-variable-italic.woff2") format("woff2-variations");
+  src: url("../fonts/josefin-sans-variable-italic.woff2") format("woff2") tech("variations");
+  font-weight: 100 700;
+  font-style: italic;
+  font-display: swap;
+}
