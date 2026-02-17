@@ -9,3 +9,6 @@
 
 @import "components/titles.css" layer(components);
 @import "components/containers.css" layer(components);
+@import "components/grid.css" layer(components);
+@import "components/fluid-images.css" layer(components);
+@import "components/fluid-videos.css" layer(components);
