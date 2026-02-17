@@ -1,0 +1,13 @@
+/* ==================================
+=containers
+================================== */
+
+.container {
+    --container-max-size: 1440px;
+    --container-padding-inline: 18px;
+
+    padding-inline: var(--container-padding-inline);
+    max-inline-size: var(--container-max-size);
+    margin: 0 auto;
+    
+}
