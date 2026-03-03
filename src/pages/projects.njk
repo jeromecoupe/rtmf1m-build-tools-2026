@@ -1,0 +1,13 @@
+---
+permalink: projects/index.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <h1>My projects</h1>
+  
+  {% for item in collections.projects %}
+    <h2>{{ item.data.title }}</h2>
+  {% endfor %}
+{% endblock %}

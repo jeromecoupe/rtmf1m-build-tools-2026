@@ -1,0 +1,15 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+  {% set img = "/assets/img/projects/" + coverImage %}
+  <div>
+    <img 
+      src="{{ img }}" 
+      class="fluidimg"
+      alt="{{ coverImageAlt }}">
+  </div>
+  <h1>{{ title }}</h1>
+  <p>{{ subtitle }}</p>
+  {{ content|safe }}
+{% endblock %}

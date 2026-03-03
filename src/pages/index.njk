@@ -1,0 +1,25 @@
+---
+permalink: index.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <h1>Hello, I am Nox</h1>
+  <p> Welcome stranger. This is my little corner of the internet.</p>
+
+  <h2>My projects</h2>
+  {# a nice comment #}
+  {% set projects = collections.projects %}
+  {% for item in projects %}
+    {% if loop.first %}<ul>{% endif %}
+
+      <li>
+        <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+        <p>{{ item.data.subtitle }}</p>
+        <p>Completed in {{ item.data.year }}</p>
+      </li>
+
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+{% endblock %}
