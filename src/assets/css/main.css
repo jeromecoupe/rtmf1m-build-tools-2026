@@ -1,14 +1,23 @@
-@layer settings, base, components;
+@layer settings, vendors, base, components, utilities;
 
+/* SETTINGS / VARIABLES */
 @import "settings/colors.css" layer(settings);
 @import "settings/typography.css" layer(settings);
 
+/* VENDORS: external CSS code */
+@import "vendors/prism.css" layer(vendors);
+
+/* BASE: html elements without classes and reset */
+@import "base/reset.css" layer(base);
 @import "base/html.css" layer(base);
 @import "base/body.css" layer(base);
 @import "base/fonts.css" layer(base);
 
+/* COMPONENTS: self contained components with classes */
 @import "components/titles.css" layer(components);
 @import "components/containers.css" layer(components);
 @import "components/grid.css" layer(components);
 @import "components/fluid-images.css" layer(components);
 @import "components/fluid-videos.css" layer(components);
+
+/* UTILITIES: margins, paddings, visually hidden, etc. */
