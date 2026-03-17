@@ -1,0 +1,10 @@
+
+{% macro projectcard(params) %}
+
+<article>
+  <h3><a href="{{ params.url }}">{{ params.title }}</a></h3>
+  <p>{{ params.subtitle }}</p>
+  <p>Completed in {{ params.year }}</p>
+</article>
+
+{% endmacro %}

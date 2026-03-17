@@ -5,6 +5,9 @@ permalink: projects/index.html
 {# layout to extend #}
 {% extends "layouts/base.njk" %}
 
+{# import macros #}
+{% from "macros/projectcard.njk" import projectcard %}
+
 {# nunjucks variable: accessible to all templates in the template chain (includes, extends, etc.) #}
 {% set currentSection = "projects" %}
 
@@ -15,10 +18,12 @@ permalink: projects/index.html
     {% if loop.first %}<ul>{% endif %}
 
     <li>
-      <article>
-        <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
-        <p>Project done in {{ item.year }}</p>
-      </article>
+      {{ projectcard({
+        title: item.data.title,
+        subtitle: item.data.title,
+        url: item.url,
+        year: item.data.year
+      }) }}
     </li>
 
     {% if loop.last %}</ul>{% endif %}
