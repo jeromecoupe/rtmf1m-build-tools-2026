@@ -1,5 +1,9 @@
 ---
-permalink: projects/index.html
+pagination:
+  data: collections.projects
+  size: 2
+  alias: projects
+permalink: projects{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1 }}{% endif %}/index.html
 ---
 
 {# layout to extend #}
@@ -14,7 +18,7 @@ permalink: projects/index.html
 {% block content %}
   <h1>My projects</h1>
   
-  {% for item in collections.projects %}
+  {% for item in projects %}
     {% if loop.first %}<ul>{% endif %}
 
     <li>
@@ -28,4 +32,15 @@ permalink: projects/index.html
 
     {% if loop.last %}</ul>{% endif %}
   {% endfor %}
+
+  
+  {% if pagination.page | length > 0 %}
+    {% if pagination.href.previous %}
+      <p><a href="{{ pagination.href.previous }}">&larr; Previous page</a></p>
+    {% endif %}
+    {% if pagination.href.next %}
+      <p><a href="{{ pagination.href.next }}">Next page &rarr;</a></p>
+    {% endif %}
+  {% endif %}
+
 {% endblock %}
