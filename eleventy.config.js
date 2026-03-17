@@ -1,4 +1,11 @@
+// plugins
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+
+// collections
+import { projects } from "./src/_11ty/collections/projects.js";
+
+// filters
+import { limit } from "./src/_11ty/filters/limit.js";
 
 /**
  * Main eleventy config function
@@ -11,20 +18,10 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
  */
 export default function (eleventyConfig) {
   // limit filter
-  eleventyConfig.addFilter("limit", function(arr, limit) {
-    if (!Array.isArray(arr)) { throw new Error("The limit filer expects an array") };
-    const slicedArray = arr.slice(0, limit);
-    return slicedArray;
-  });
+  eleventyConfig.addFilter("limit", limit);
 
   // collection projects
-  eleventyConfig.addCollection("projects", function(collectionApi) {
-    const projects = collectionApi
-      .getFilteredByGlob("./src/projects/*.md")
-      .sort((a,b) => a.data.year - b.data.year);
-    
-    return projects;
-  });
+  eleventyConfig.addCollection("projects", projects);
 
 
   // configure dev server
