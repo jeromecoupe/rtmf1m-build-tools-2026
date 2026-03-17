@@ -10,6 +10,13 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
  * @param {*} eleventyConfig 
  */
 export default function (eleventyConfig) {
+  // limit filter
+  eleventyConfig.addFilter("limit", function(arr, limit) {
+    if (!Array.isArray(arr)) { throw new Error("The limit filer expects an array") };
+    const slicedArray = arr.slice(0, limit);
+    return slicedArray;
+  });
+
   // collection projects
   eleventyConfig.addCollection("projects", function(collectionApi) {
     const projects = collectionApi
