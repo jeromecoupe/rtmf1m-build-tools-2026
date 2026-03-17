@@ -2,8 +2,13 @@
 permalink: index.html
 ---
 
+{# layout to extend #}
 {% extends "layouts/base.njk" %}
 
+{# nunjucks variable: accessible to all templates in the template chain (includes, extends, etc.) #}
+{% set currentSection = "home" %}
+
+{#  content to be added to the "content" block of the extended layout #}
 {% block content %}
   <h1>Hello, I am Nox</h1>
   <p> Welcome stranger. This is my little corner of the internet.</p>
@@ -22,4 +27,5 @@ permalink: index.html
 
     {% if loop.last %}</ul>{% endif %}
   {% endfor %}
+  <p><a href="/projects/">All projects</a></p>
 {% endblock %}

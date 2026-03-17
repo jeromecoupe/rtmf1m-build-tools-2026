@@ -19,5 +19,6 @@
 @import "components/grid.css" layer(components);
 @import "components/fluid-images.css" layer(components);
 @import "components/fluid-videos.css" layer(components);
+@import "components/mainnav.css" layer(components);
 
 /* UTILITIES: margins, paddings, visually hidden, etc. */

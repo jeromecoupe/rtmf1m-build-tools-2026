@@ -10,11 +10,12 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
  * @param {*} eleventyConfig 
  */
 export default function (eleventyConfig) {
-  // collections
+  // collection projects
   eleventyConfig.addCollection("projects", function(collectionApi) {
     const projects = collectionApi
       .getFilteredByGlob("./src/projects/*.md")
       .sort((a,b) => a.data.year - b.data.year);
+    
     return projects;
   });
 

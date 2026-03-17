@@ -1,3 +1,26 @@
 <header>
   <p>My super header</p>
+  <nav>
+    {% for item in mainnav %}
+      {% if loop.first %}<ul class="mainnav">{% endif %}
+        {#
+          set current nav item
+          - currentSection is a nunjucks variable coming from templates
+          - navSection is a variable coming from ou mainnav.js data file
+          - if they are the same, we know we are in that section
+        #}
+        {% set currentAria = "" %}
+        {% set currentClass = "" %}
+        {% if currentSection == item.navSection %}
+          {% set currentClass = "is-active" %}
+          {% set currentAria = "current-aria=\"page\"" %}
+        {% endif %}
+        <li class="mainnav-item">
+          <a href="{{ item.navUrl }}" class="mainnav-link {{ currentClass }}" {{ currentAria|safe }}>
+            {{ item.navLabel }}
+          </a>
+        </li>
+      {% if loop.last %}</ul>{% endif %}
+    {% endfor %}
+  </nav>
 </header>

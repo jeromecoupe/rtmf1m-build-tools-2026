@@ -1,4 +1,8 @@
+{# layout to extend #}
 {% extends "layouts/base.njk" %}
+
+{# nunjucks variable: accessible to all templates in the template chain (includes, extends, etc.) #}
+{% set currentSection = "projects" %}
 
 {% block content %}
 
@@ -12,4 +16,5 @@
   <h1>{{ title }}</h1>
   <p>{{ subtitle }}</p>
   {{ content|safe }}
+  
 {% endblock %}

@@ -1,0 +1,29 @@
+/* ==================================
+=mainnav
+================================== */
+
+.mainnav {
+  --mainnav-gap: 18px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: var(--mainnav-gap);
+}
+
+.mainnav-link {
+  display: inline-block;
+  padding-block: 6px;
+  text-decoration: none;
+}
+
+.mainnav-link.is-active {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 2px;
+}

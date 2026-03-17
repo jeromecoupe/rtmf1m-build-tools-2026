@@ -2,7 +2,11 @@
 permalink: about/index.html
 ---
 
+{# layout to extend #}
 {% extends "layouts/base.njk" %}
+
+{# nunjucks variable: accessible to all templates in the template chain (includes, extends, etc.) #}
+{% set currentSection = "about" %}
 
 {% block content %}
   <h1>About Nox</h1>

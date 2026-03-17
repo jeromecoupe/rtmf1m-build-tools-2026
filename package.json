@@ -15,7 +15,6 @@
     "scripts:prod": "esbuild \"./src/assets/js/main.js\" --target=\"es2020\" --bundle --minify --outfile=\"./dist/assets/js/main.bundle.js\"",
     "watch:styles": "onchange \"./src/assets/css/**/*\" -- npm run styles:dev",
     "watch:scripts": "onchange \"./src/assets/js/**/*\" -- npm run scripts:dev",
-    "predev": "npm run build",
     "build": "npm-run-all clear --parallel eleventy styles:prod scripts:prod",
     "dev": "npm-run-all --parallel server watch:*"
   },

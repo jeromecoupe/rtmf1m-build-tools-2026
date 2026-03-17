@@ -2,12 +2,25 @@
 permalink: projects/index.html
 ---
 
+{# layout to extend #}
 {% extends "layouts/base.njk" %}
+
+{# nunjucks variable: accessible to all templates in the template chain (includes, extends, etc.) #}
+{% set currentSection = "projects" %}
 
 {% block content %}
   <h1>My projects</h1>
   
   {% for item in collections.projects %}
-    <h2>{{ item.data.title }}</h2>
+    {% if loop.first %}<ul>{% endif %}
+
+    <li>
+      <article>
+        <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+        <p>Project done in {{ item.year }}</p>
+      </article>
+    </li>
+
+    {% if loop.last %}</ul>{% endif %}
   {% endfor %}
 {% endblock %}
